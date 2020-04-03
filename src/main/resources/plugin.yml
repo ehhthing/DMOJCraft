@@ -1,0 +1,14 @@
+name: DMOJCraft
+version: ${project.version}
+main: science.larry.dmojcraft.DMOJCraft
+api-version: 1.15
+commands:
+  auth:
+    description: Authenticates to your DMOJ account
+    usage: /auth [API TOKEN]
+  submit:
+    description: Submits to a problem on DMOJ. The source code should be in the book that is currently being held.
+    usage: /submit [PROBLEM ID] [LANGUAGE]
+  book:
+    description: Gives a book and quill to submit with.
+    usage: /book

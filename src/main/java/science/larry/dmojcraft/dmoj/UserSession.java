@@ -48,19 +48,6 @@ public class UserSession {
     public int submit(String problem, int language, String code) throws IOException, InvalidSessionException {
         String submitURL = BASE_URL + "/problem/" + problem + "/submit";
 
-        Document doc;
-        try {
-            doc = getAuthRequest(submitURL).get();
-        } catch (HttpStatusException e) {
-            if (e.getStatusCode() == 401) {
-                throw new InvalidSessionException();
-            } else {
-                throw e;
-            }
-        }
-
-        String problemID = doc.getElementById("id_problem").val();
-
         Response submitRes;
         try {
             submitRes = getAuthRequest(submitURL)

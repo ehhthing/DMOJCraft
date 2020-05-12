@@ -65,7 +65,6 @@ public class UserSession {
         try {
             submitRes = getAuthRequest(submitURL)
                     .method(Connection.Method.POST)
-                    .data("problem", problemID)
                     .data("source", code)
                     .data("language", String.valueOf(language))
                     .followRedirects(true)
